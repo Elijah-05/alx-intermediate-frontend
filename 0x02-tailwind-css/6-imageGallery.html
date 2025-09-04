@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="p-4 w-1/2 bg-red-200">Flexbox Item 1</div>
+            <div class="p-4 w-1/2 bg-red-400">Flexbox Item 2</div>
+        </section>
+        <aside class="bg-green-200 p-4 row-span-2">Sidebar</aside>
+        <section class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-min">
+            <header class="sm:cols-span-2 lg:col-span-3 bg-gray-300 text-center p-4 h-fit text-xl font-medium">
+                <h2>Image Gallery</h2>
+            </header>
+            <div class="">
+             <img src="https://picsum.photos/id/234/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+             <div class="">
+             <img src="https://picsum.photos/id/137/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+              <div class="">
+             <img src="https://picsum.photos/id/236/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+              <div class="">
+             <img src="https://picsum.photos/id/227/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+              <div class="">
+             <img src="https://picsum.photos/id/277/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+              <div class="">
+             <img src="https://picsum.photos/id/337/200/300" alt="" class=" w-full h-full aspect-video object-cover">
+            </div>
+       </section>
+    </main>
+
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
